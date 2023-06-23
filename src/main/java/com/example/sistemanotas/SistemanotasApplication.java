@@ -1,6 +1,7 @@
 package com.example.sistemanotas;
 
 import com.example.sistemanotas.model.Aluno;
+import com.example.sistemanotas.model.CursoCount;
 import com.example.sistemanotas.model.Nota;
 import com.example.sistemanotas.repository.AlunoRepository;
 import com.example.sistemanotas.repository.NotaRepository;
@@ -126,12 +127,17 @@ public class SistemanotasApplication implements CommandLineRunner {
 
 
 		// ============================= 4.4 OBTER A CONTAGEM TOTAL DE ALUNOS POR CURSO ============================== //
-		Map<String, Integer> Cursos = alunoRepository.contarAlunosPorCurso();
-		for (Map.Entry<String, Integer> curso : Cursos.entrySet()) {
-			System.out.println(curso.getKey() + ": " + curso.getValue());
+		System.out.println("// 4.4 OBTER A CONTAGEM TOTAL DE ALUNOS POR CURSO //");
+		List<CursoCount> cursosCount = alunoRepository.contarAlunosPorCurso();
+		for (CursoCount cursoCount : cursosCount) {
+			String curso = cursoCount.getCurso();
+			int totalAlunos = cursoCount.getTotalAlunos();
+			System.out.println("==> curso: " + curso);
+			System.out.println("-> total de alunos: " + totalAlunos);
+			System.out.println(" ");
 		}
 
 		System.out.println(" ");
-		System.out.println("FLAG");
+		System.out.println("<------ FIM DO PAINEL DE CONTROLE DE NOTAS ------>");
 	}
 }
