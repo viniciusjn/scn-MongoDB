@@ -1,6 +1,6 @@
 Projeto da faculdade - SCN (Sistema de Controle de Notas) <br>
 
--> OBJETIVO: o objetivo era a criação de um banco de dados não relacional no Atlas (MongoDB) e a implentação de um sistema de controle de notas (scn) com realização de consultas específicas sobre esses alunos, suas notas e dados
+-> OBJETIVO: o objetivo era a criação de um banco de dados não relacional no Atlas (MongoDB) e a implentação de um sistema de controle de notas com realização de consultas específicas sobre esses alunos, suas notas e dados
 
 especificações e tecnologias:
 - foi realizado com SpringBoot
